@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Prediction</title>
+</head>
+<body>
+    <h1>Predict the laptop Price</h1>
+    <form action="/" method="POST">
+
+        <label for="ram">RAM:</label>
+        <input type="text" id="ram" name="ram" required><br><br>
+
+        <label for="weight">Weight(Kg):</label>
+        <input type="text" id="weight" name="weight" required><br><br>
+
+        <label for="company">Company:</label>
+        <select name="company" id="company">
+            <option value="" selected hidden>Select</option>
+            <option value="acer">Acer</option>
+            <option value="apple">Apple</option>
+            <option value="asus">Asus</option>
+            <option value="dell">Dell</option>
+            <option value="hp">HP</option>
+            <option value="lenovo">Lenovo</option>
+            <option value="msi">MSI</option>
+            <option value="toshiba">Toshiba</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="typename">Category:</label>
+        <select name="typename" id="typename">
+            <option value="" selected hidden>Select</option>
+            <option value="2in1convertible">2 in 1 Convertible</option>
+            <option value="gaming">Gaming</option>
+            <option value="netbook">Net Book</option>
+            <option value="notebook">Note Book</option>
+            <option value="ultrabook">Ultra Book</option>
+            <option value="workstation">Workstation</option>
+        </select> <br><br>
+
+        <label for="cpuname">CPU Category:</label>
+        <select name="cpuname" id="cpuname">
+            <option value="" selected hidden>Select</option>
+            <option value="intelcorei3">Intel Core i3</option>
+            <option value="intelcorei5">Intel Core i5</option>
+            <option value="intelcorei7">Intel Core i7</option>
+            <option value="amd">AMD</option>
+            <option value="other">Other</option>
+        </select> <br><br>
+
+        <label for="gpuname">GPU Category:</label>
+        <select name="gpuname" id="gpuname">
+            <option value="" selected hidden>Select</option>
+            <option value="intel">Intel</option>
+            <option value="amd">AMD</option>
+            <option value="nvidia">Nvidia</option>
+        </select><br><br>
+
+        <label for="opsys">OS Category:</label>
+        <select name="opsys" id="opsys">
+            <option value="" selected hidden>Select</option>
+            <option value="windows">Windows</option>
+            <option value="mac">Mac</option>
+            <option value="linux">Linux</option>
+            <option value="other">Other</option>
+        </select> <br><br>
+
+        <label for="touchscreen">Touchscreen:</label>
+        <input type="checkbox" id="touchscreen" name="touchscreen" value="Yes"><br><br>
+
+        <label for="ips">IPS:</label>
+        <input type="checkbox" id="ips" name="ips" value="Yes"><br><br>
+
+        <input type="submit" value="Predict Price">
+    </form>
+    <div>
+        {% if pred_value !=0 %}
+        <p>
+            Estimated Price : LKR {{pred_value}}
+        </p>
+        {% endif %}
+    </div>
+    
+</body>
+</html>

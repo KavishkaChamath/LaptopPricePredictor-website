@@ -1,0 +1,98 @@
+/* Style for the body and overall page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    height: 100vh;
+    justify-content: flex-start; /* Align items at the top */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px; /* Add some margin at the top */
+}
+
+/* Form Container */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto; /* Center the form and add margin */
+}
+
+/* Styling the form labels */
+form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Styling the form inputs and select boxes */
+form input[type="text"], form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="text"]:focus, form select:focus {
+    background-color: #eef;
+    border-color: #007BFF;
+}
+
+/* Checkboxes */
+form input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+form label[for="ssd"], form label[for="hdd"], form label[for="flashStorage"],
+form label[for="touchscreen"], form label[for="ips"] {
+    display: inline;
+    font-size: 14px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+
+/* Styling for the result display */
+div p {
+    text-align: center;
+    font-size: 18px;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 20px;
+}
